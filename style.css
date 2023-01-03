@@ -1,3 +1,5 @@
+/* -------  General Styles ------- */
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -10,7 +12,7 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -20,7 +22,8 @@ p {
 }
 
 section {
-  padding: 4%;
+/*padding: 20px;*/
+  padding: 3%;
 }
 
 section.alternate-background {
@@ -29,6 +32,7 @@ section.alternate-background {
 }
 
 main img {
+/*width: 100px;*/
   width: 100%;
 }
 
@@ -41,41 +45,58 @@ main img {
 
 .item {
   flex: 1;
-  margin: 2%;
+/*margin: 2%;*/
+  margin: 10px;
 }
 
 .item > img {
-width: 100%;
+  flex: 1;  
+  width: 100%;
 }
 
 .item-double {
-  padding: 1%;
+/*padding: 1%;*/
   flex: 2;
 }
 
 /* ---- Navigation -----*/
 
 header {
+  display: flex;
   background-color: #ff385c;
-  padding: 2% 2% 0 2%;
-  text-align: center;
+/*padding: 2% 2% 0 2%;*/
+/*padding: 20px 20px 0 20px;*/
+/*text-align: center;*/
+  flex-direction: column;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 74px;
+  font-size: 50px;
   color: #fff;
   text-align: center;
+  padding: 5px;
 }
 
-header nav ul li {
-  list-style-type: none;
+header nav {
+display: flex;
+justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  margin: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
 }
 
 header nav ul li a:hover {
@@ -83,10 +104,12 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+
 #menu {
   display: flex;
-  justify-content: center;
-  padding-bottom: 15px;
+/*justify-content: center;*/
+  align-items: center;
+  padding-bottom: 5%;
 }
 
 /*------ Search Form -------*/
@@ -97,7 +120,8 @@ header nav ul li a:hover {
 
 form {
   border: 2px solid #ff385c;
-  padding: 1%;
+/*padding: 1%;*/
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -142,15 +166,32 @@ footer p {
   header {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    padding: 0 30px;
   }
 
-  nav {
-    padding-top: 10px;
+  #logo {
+    margin: 14px 0;
+    padding-top: 0;
   }
 
+  header nav {
+  margin-top: 8px;
+/*display: flex;*/
+/*justify-content: space-between;*/
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+  }
+  
   #menu {
-    flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+    flex-wrap: nowrap;
     line-height: 1.4;
+    justify-content: space-between;
+    
   }
 
   form {
@@ -159,13 +200,17 @@ footer p {
   }
 
   .logo {
-    font-size: 51px;
+    display: flex;
+    font-size: 200%;
+    align-items: center;
+    
   }
 
   .form-group {
     flex-direction: column;
     min-width: 0;
   }
+  
 
   .group {
     flex-direction: row;
@@ -180,5 +225,4 @@ footer p {
     flex-direction: column;
     justify-content: center;
   }
-
 }
